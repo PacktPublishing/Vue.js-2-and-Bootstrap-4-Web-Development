@@ -1,4 +1,4 @@
-# Web Development with Vue.js, Bootstrap, and Firebase
+# Vue.js 2 and Bootstrap 4 Web Development
 This is the code repository for [Web Development with Vue.js, Bootstrap, and Firebase](https://www.packtpub.com/web-development/web-development-vuejs-bootstrap-and-firebase?utm_source=github&utm_medium=repository&utm_campaign=9781788290920), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
 Vue.js is one of the latest new frameworks to have piqued the interest of web developers due to its reactivity, reusable components, and ease of use. When you combine Bootstrap with Vue.js, it provides quicker ways to create responsive web applications.
