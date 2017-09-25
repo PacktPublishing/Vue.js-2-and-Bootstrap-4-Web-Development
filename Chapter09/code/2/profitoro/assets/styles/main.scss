@@ -1,0 +1,34 @@
+// NOTE: This is only global inside the vue.js component.
+@import 'vendors/module';
+@import 'base/module';
+@import 'utils/module';
+@import 'components/module';
+
+.bold {
+  font-weight: bold;
+}
+
+.form {
+  padding: 40px 0;
+}
+
+.min-full-height {
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+}
+
+.title {
+  font-size: 25px;
+  color: $color-primary;
+}
+
+.main-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.container {
+  @include media-breakpoint-down(md) {
+    width: 760px;
+    max-width: 100%;
+  }
+}

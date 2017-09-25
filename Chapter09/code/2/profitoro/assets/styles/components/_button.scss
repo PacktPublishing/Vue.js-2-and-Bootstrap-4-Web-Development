@@ -1,0 +1,49 @@
+
+$button-font-size: $font-size-normal;
+$button-padding: 15px 50px;
+
+
+%button {
+  border: none;
+  display: block;
+  width: 100%;
+  min-height: 54px;
+  padding: $button-padding;
+  font-size: $button-font-size;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.button {
+  @extend %button;
+  color: $color-white;
+
+  &.button-primary {
+    background-color: $color-primary;
+  }
+  &.button-primary-faded {
+    color: $color-primary;
+    background-color: $color-primary-faded;
+  }
+
+  &.button-lp-primary {
+    background-color: $color-lp-primary;
+  }
+  &.button-lp-primary-faded {
+    background-color: $color-lp-primary-faded;
+  }
+  &.button-lp-secondary {
+    color: $color-lp-primary;
+    background-color: $color-white;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+}

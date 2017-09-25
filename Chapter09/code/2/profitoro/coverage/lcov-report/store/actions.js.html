@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for store/actions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">store</a> actions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/74</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import firebaseApp from '~/firebase'
+import { firebaseAction } from 'vuexfire'
+import uuidv1 from 'uuid/v1'
+&nbsp;
+/**
+ * Uploads individual file
+ * @param file
+ * @returns {firebase.Promise}
+ * @private
+ */
+function <span class="fstat-no" title="function not covered" >_uploadImage </span>(file) {
+  let ref = <span class="cstat-no" title="statement not covered" >firebaseApp.storage().ref().child('workouts')</span>
+<span class="cstat-no" title="statement not covered" >  return ref.child(uuidv1()).child(file.name).put(file).then(<span class="fstat-no" title="function not covered" >sn</span>apshot =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return snapshot.downloadURL</span>
+  })
+}
+&nbsp;
+export default {
+  /**
+   * Uploads images to the firebase datastore
+   * @param state
+   * @param files
+   * @returns {Promise}
+   */
+  uploadImages ({state}, files) {
+<span class="cstat-no" title="statement not covered" >    return Promise.all(files.map(_uploadImage))</span>
+  },
+  /**
+   * Creates new workout
+   * @param commit
+   * @param state
+   * @param workout
+   */
+  createNewWorkout ({commit, state}, workout) {
+<span class="cstat-no" title="statement not covered" >    if (!workout) {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    workout.username = state.user.displayName</span>
+<span class="cstat-no" title="statement not covered" >    workout.uid = state.user.uid</span>
+<span class="cstat-no" title="statement not covered" >    workout.date = Date.now()</span>
+<span class="cstat-no" title="statement not covered" >    workout.rate = 0</span>
+    // Get a key for a new Workout.
+    let newWorkoutKey = <span class="cstat-no" title="statement not covered" >state.workoutsRef.push().key</span>
+&nbsp;
+    // Write the new post's data simultaneously in the posts list and the user's post list.
+    let updates = <span class="cstat-no" title="statement not covered" >{}</span>
+<span class="cstat-no" title="statement not covered" >    updates['/workouts/' + newWorkoutKey] = workout</span>
+<span class="cstat-no" title="statement not covered" >    updates['/user-workouts/' + state.user.uid + '/' + newWorkoutKey] = workout</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return firebaseApp.database().ref().update(updates)</span>
+  },
+  /**
+   * Sets the working pomodoro timer
+   * @param {object} store
+   * @param {number} workingPomodoro
+   */
+  setWorkingPomodoro ({commit, state}, workingPomodoro) {
+<span class="cstat-no" title="statement not covered" >    if (!workingPomodoro) {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+<span class="cstat-no" title="statement not covered" >    workingPomodoro = parseFloat(workingPomodoro)</span>
+<span class="cstat-no" title="statement not covered" >    if (state.configRef) {</span>
+<span class="cstat-no" title="statement not covered" >      state.configRef.update({workingPomodoro})</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      commit('setWorkingPomodoro', workingPomodoro)</span>
+    }
+  },
+  /**
+   * Sets the short break pomodoro configuration
+   * @param {object} store
+   * @param {number} shortBreak
+   */
+  setShortBreak ({commit, state}, shortBreak) {
+<span class="cstat-no" title="statement not covered" >    if (!shortBreak) {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+<span class="cstat-no" title="statement not covered" >    shortBreak = parseFloat(shortBreak)</span>
+<span class="cstat-no" title="statement not covered" >    if (state.configRef) {</span>
+<span class="cstat-no" title="statement not covered" >      state.configRef.update({shortBreak})</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      commit('setShortBreak', shortBreak)</span>
+    }
+  },
+  /**
+   * Sets the long break pomodoro configuration
+   * @param {object} store
+   * @param {number} longBreak
+   */
+  setLongBreak ({commit, state}, longBreak) {
+<span class="cstat-no" title="statement not covered" >    if (!longBreak) {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+<span class="cstat-no" title="statement not covered" >    longBreak = parseFloat(longBreak)</span>
+<span class="cstat-no" title="statement not covered" >    if (state.configRef) {</span>
+<span class="cstat-no" title="statement not covered" >      state.configRef.update({longBreak})</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      commit('setLongBreak', longBreak)</span>
+    }
+  },
+  /**
+   * Updates the total pomodoro number
+   * @param {object} store
+   * @param {number} totalPomodoros
+   */
+  updateTotalPomodoros ({state}, totalPomodoros) {
+<span class="cstat-no" title="statement not covered" >    state.statisticsRef.update({totalPomodoros: totalPomodoros})</span>
+  },
+  /**
+   * Creates a new user with given email and password and stores it in the firebase database
+   * @param {object} store
+   * @param {object} email and password
+   */
+  createUser ({state}, {email, password}) {
+<span class="cstat-no" title="statement not covered" >    firebaseApp.auth().createUserWithEmailAndPassword(email, password)</span>
+    .catch(<span class="fstat-no" title="function not covered" >er</span>ror =&gt; {
+<span class="cstat-no" title="statement not covered" >      console.log(error.code, error.message)</span>
+    })
+  },
+  /**
+   * Updates user display name
+   * @param state
+   * @param commit
+   * @param {string} displayName
+   */
+  updateUserName ({state, commit}, displayName) {
+<span class="cstat-no" title="statement not covered" >    state.user.updateProfile({</span>
+      displayName
+    })
+<span class="cstat-no" title="statement not covered" >    commit('setDisplayName', displayName)</span>
+  },
+  /**
+   * Updates user's profile pic
+   * @param state
+   * @param {string} photoURL
+   */
+  updatePhotoURL ({state}, photoURL) {
+<span class="cstat-no" title="statement not covered" >    state.user.updateProfile({</span>
+      photoURL
+    })
+  },
+  /**
+   * Updates user's email address
+   * @param state
+   * @param {string} email
+   */
+  updateUserEmail ({state}, email) {
+<span class="cstat-no" title="statement not covered" >    state.user.updateEmail(email).then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+      // Update successful.
+    }, <span class="fstat-no" title="function not covered" >er</span>ror =&gt; {
+<span class="cstat-no" title="statement not covered" >      console.log(error)</span>
+    })
+  },
+  /**
+   * Authenticates a new user with given email and password
+   * @param {object} store
+   * @param {object} email and password
+   */
+  authenticate ({state, dispatch}, {email, password}) {
+<span class="cstat-no" title="statement not covered" >    firebaseApp.auth().signInWithEmailAndPassword(email, password)</span>
+  },
+  /**
+   * Authenticates anonymous user
+   * @param {object} store
+   */
+  authenticateAnonymous ({state}) {
+<span class="cstat-no" title="statement not covered" >    firebaseApp.auth().signInAnonymously().catch(<span class="fstat-no" title="function not covered" >er</span>ror =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      console.log(error.code, error.message)</span>
+    })
+  },
+  /**
+   * Logouts the user from the application
+   * @param {object} store
+   */
+  logout ({state}) {
+<span class="cstat-no" title="statement not covered" >    firebaseApp.auth().signOut()</span>
+  },
+  /**
+   * Binds firebase auth listener to the auth changes to the callback that will set the store's user object
+   * @param {object} store
+   */
+  bindAuth ({commit, dispatch, state}) {
+<span class="cstat-no" title="statement not covered" >    firebaseApp.auth().onAuthStateChanged(<span class="fstat-no" title="function not covered" >us</span>er =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      commit('setUser', user)</span>
+<span class="cstat-no" title="statement not covered" >      if (user &amp;&amp; !user.isAnonymous) {</span>
+<span class="cstat-no" title="statement not covered" >        commit('setDisplayName', user.displayName)</span>
+<span class="cstat-no" title="statement not covered" >        dispatch('bindFirebaseReferences', user)</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (!user) {</span>
+<span class="cstat-no" title="statement not covered" >        dispatch('unbindFirebaseReferences')</span>
+      }
+    })
+  },
+  /**
+   * Binds firebase configuration and statistics database references to the store's corresponding objects
+   * @param {object} store
+   */
+  bindFirebaseReferences: firebaseAction(<span class="fstat-no" title="function not covered" >({</span>state, commit, dispatch}, user) =&gt; {
+    let db = <span class="cstat-no" title="statement not covered" >firebaseApp.database()</span>
+    let configRef = <span class="cstat-no" title="statement not covered" >db.ref(`/configuration/${user.uid}`)</span>
+    let statisticsRef = <span class="cstat-no" title="statement not covered" >db.ref(`/statistics/${user.uid}`)</span>
+    let workoutsRef = <span class="cstat-no" title="statement not covered" >db.ref('/workouts')</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    dispatch('bindFirebaseReference', {reference: configRef, toBind: 'config'}).then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      commit('setConfigRef', configRef)</span>
+    })
+<span class="cstat-no" title="statement not covered" >    dispatch('bindFirebaseReference', {reference: statisticsRef, toBind: 'statistics'}).then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      commit('setStatisticsRef', statisticsRef)</span>
+    })
+<span class="cstat-no" title="statement not covered" >    dispatch('bindFirebaseReference', {reference: workoutsRef, toBind: 'workouts'}).then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      commit('setWorkoutsRef', workoutsRef)</span>
+    })
+  }),
+  /**
+   * Generic binder of the firebase reference to the given key of the store's state
+   * Checks if the value already exists in the database, otherwise will set it with the default store's state before binding
+   * @param {object} store
+   */
+  bindFirebaseReference: firebaseAction(<span class="fstat-no" title="function not covered" >({</span>bindFirebaseRef, state}, {reference, toBind}) =&gt; {
+<span class="cstat-no" title="statement not covered" >    return reference.once('value').then(<span class="fstat-no" title="function not covered" >sn</span>apshot =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (!snapshot.val()) {</span>
+<span class="cstat-no" title="statement not covered" >        reference.set(state[toBind])</span>
+      }
+<span class="cstat-no" title="statement not covered" >      bindFirebaseRef(toBind, reference)</span>
+    })
+  }),
+  /**
+   * Undbinds firebase references
+   */
+  unbindFirebaseReferences: firebaseAction(<span class="fstat-no" title="function not covered" >({</span>unbindFirebaseRef, commit}) =&gt; {
+<span class="cstat-no" title="statement not covered" >    commit('setConfigRef', null)</span>
+<span class="cstat-no" title="statement not covered" >    commit('setStatisticsRef', null)</span>
+<span class="cstat-no" title="statement not covered" >    commit('setWorkoutsRef', null)</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      unbindFirebaseRef('config')</span>
+<span class="cstat-no" title="statement not covered" >      unbindFirebaseRef('statistics')</span>
+<span class="cstat-no" title="statement not covered" >      unbindFirebaseRef('workouts')</span>
+    } catch (error) {
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+  })
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Aug 15 2017 00:46:49 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

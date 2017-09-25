@@ -1,0 +1,31 @@
+
+$input-font-size: $font-size-normal;
+$input-padding: 10px 0;
+
+
+%input {
+  border: none;
+  border-bottom: 1px solid;
+  display: block;
+  width: 100%;
+  min-height: 54px;
+  padding: $input-padding;
+  font-size: $input-font-size;
+}
+
+.input {
+  @extend %input;
+  background-color: transparent;
+  color: $color-grey-input;
+  border-bottom-color: $color-grey-input;
+  @include placeholder($color-grey-input);
+
+  &.white {
+    color: $color-white;
+    border-bottom-color: $color-white;
+    @include placeholder(rgba($color-white, 0.7));
+  }
+  &:focus {
+    outline: none;
+  }
+}

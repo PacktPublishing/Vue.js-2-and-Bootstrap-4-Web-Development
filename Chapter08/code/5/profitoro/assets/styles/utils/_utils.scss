@@ -1,0 +1,6 @@
+
+.center-content {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+}

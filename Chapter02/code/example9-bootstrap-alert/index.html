@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Alert</title>
+  <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="alert alert-success" role="alert">
+      <strong>Hello!</strong> You have successfully opened this page!
+    </div>
+    <div class="alert alert-info" role="alert">
+      <strong>Hey!</strong> Important information - this alert cannot be closed.
+    </div>
+    <div class="alert alert-warning" role="alert">
+      <strong>Warning!</strong> It might be raining tonight, take your umbrella!
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <strong>Failure!</strong> Since you don't like this failure alert you can simply close it.
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

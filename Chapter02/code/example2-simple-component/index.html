@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js - components</title>
+</head>
+<body>
+  <div id="app">
+    <hello-component></hello-component>
+    <hello-component></hello-component>
+    <hello-component></hello-component>
+  </div>
+  <script src="vue.js"></script>
+  <script>
+    var HelloComponent = {
+      template: '<div>' +
+      '<input v-model="name" />' +
+      '<h1>Hello <strong>{{name}}</strong>!</h1>' +
+      '</div>',
+      data() {
+        return {
+          name: ''
+        }
+      }
+    }
+    new Vue({
+      el: '#app',
+      components: {
+        HelloComponent
+      }
+    })
+  </script>
+</body>
+</html>

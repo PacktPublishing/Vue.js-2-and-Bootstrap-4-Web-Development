@@ -1,0 +1,13 @@
+// NOTE: This is only global inside the vue.js component.
+@import 'vendors/module';
+@import 'base/module';
+@import 'utils/module';
+@import 'components/module';
+
+.bold {
+  font-weight: bold;
+}
+
+.form {
+  padding: 40px 0;
+}
