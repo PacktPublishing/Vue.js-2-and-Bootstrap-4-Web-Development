@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "profitoro-ad0f0",
+    "staging": "profitoro-staging"
+  }
+}
